@@ -25,12 +25,13 @@ their Linux servers.
 git clone https://github.com/nbagorija/linux-hardening-toolkit.git
 cd linux-hardening-toolkit
 chmod +x main.sh modules/*.sh
-
+```
 
 ## 🔧 Usage
 
 ```bash
 sudo ./main.sh
+````
 
 ## Menu Options
 
@@ -59,8 +60,8 @@ on any system. The author is not responsible for any misuse.
 
 ## 📄 License
 
-This project is licensed under the MIT License — see the LICENSE file.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file.
 
 ## 👤 Author
 
-nbagorija - Github
+**nbagorija** — [GitHub](https://github.com/nbagorija)
