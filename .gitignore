@@ -1,0 +1,17 @@
+# Отчёты
+reports/*.txt
+reports/*.html
+reports/*.pdf
+
+# Не игнорировать саму папку
+!reports/.gitkeep
+
+# Системные файлы
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
