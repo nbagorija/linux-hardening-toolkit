@@ -1,0 +1,52 @@
+# Hardened SSH Configuration
+# Based on CIS Benchmarks
+# Copy to /etc/ssh/sshd_config after review
+
+# Protocol
+Protocol 2
+
+# Port (change to non-default)
+Port 2222
+
+# Listening
+AddressFamily inet
+ListenAddress 0.0.0.0
+
+# Authentication
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM yes
+
+# Limits
+MaxAuthTries 4
+MaxSessions 4
+LoginGraceTime 60
+
+# Timeouts
+ClientAliveInterval 300
+ClientAliveCountMax 2
+
+# Features
+X11Forwarding no
+AllowTcpForwarding no
+AllowAgentForwarding no
+PermitTunnel no
+
+# Access Control (uncomment and modify)
+# AllowUsers your_username
+# AllowGroups ssh_users
+
+# Logging
+LogLevel VERBOSE
+SyslogFacility AUTH
+
+# Banners
+Banner /etc/issue.net
+
+# Key Exchange & Ciphers (strong only)
+KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com
